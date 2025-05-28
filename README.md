@@ -3,18 +3,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work's Best Friend</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f6f8fb;
-      color: #1a1a1a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
+      body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://worksbestfriend.github.io/NYCSkyline.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
     .container {
       max-width: 600px;
       background: white;
@@ -85,4 +87,3 @@
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
 </body>
-
