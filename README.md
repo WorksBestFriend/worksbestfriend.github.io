@@ -2,6 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work's Best Friend</title>
+  color: white;
   <style>
       body {
   margin: 0;
@@ -27,7 +28,6 @@
     h1 {
       margin-bottom: 0.5rem;
       font-size: 2rem;
-      color: white;
     }
     p {
       margin: 1rem 0;
