@@ -72,7 +72,7 @@
     <h1>Work’s Best Friend</h1>
     <p><strong>Simple, effective help for businesses that need it — when they need it.</strong></p>
     <p>We’re a flexible agency helping business owners with marketing and more.<br>
-       We reach out first — then tailor our services to your real needs.<br>
+       With tailored services to your real needs.<br>
        Think of us as your on-call business partner.</p>
     <form action="mailto:jay@worksbestfriend.com" method="POST" enctype="text/plain">
       <label for="email">💬 Interested in working with us?</label>
