@@ -27,6 +27,7 @@
     h1 {
       margin-bottom: 0.5rem;
       font-size: 2rem;
+      color: white;
     }
     p {
       margin: 1rem 0;
