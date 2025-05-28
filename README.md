@@ -80,4 +80,3 @@
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
 </body>
-</html>
