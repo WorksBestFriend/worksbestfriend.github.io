@@ -72,10 +72,6 @@
     <p>We’re a flexible agency helping business owners with marketing and more.<br>
        With tailored services to your real needs.<br>
        Think of us as your on-call business partner.</p>
-    <form action="mailto:jay@worksbestfriend.com" method="POST" enctype="text/plain">
-      <label for="email">💬 Interested in working with us?</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">Send</button>
     <form action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
   <label for="email">💬 Interested in working with us?</label>
   <input type="email" id="email" name="email" placeholder="Enter your email" required />
