@@ -76,7 +76,16 @@
       <label for="email">💬 Interested in working with us?</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required />
       <button type="submit">Send</button>
-    </form>
+    <form action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
+  <label for="email">💬 Interested in working with us?</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required />
+  <button type="submit">Send</button>
+
+  <!-- Optional hidden fields -->
+  <input type="hidden" name="_subject" value="New Lead from Work's Best Friend!" />
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+</form>
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
 </body>
