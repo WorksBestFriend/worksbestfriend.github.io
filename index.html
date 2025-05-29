@@ -6,8 +6,6 @@
       body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://worksbestfriend.github.io/NYCSkyline.png') no-repeat center center fixed;
-  background-size: cover;
   color: #1a1a1a;
   display: flex;
   justify-content: center;
@@ -66,8 +64,53 @@
       color: #aaa;
     }
   </style>
+.slideshow-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeImages 30s infinite;
+}
+
+.img1 {
+  background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
+  animation-delay: 0s;
+}
+.img2 {
+  background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg');
+  animation-delay: 10s;
+}
+.img3 {
+  background-image: url('worksbestfriend.github.io/MiamiSkyline.jpg');
+  animation-delay: 20s;
+}
+
+@keyframes fadeImages {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
 </head>
 <body>
+<div class="slideshow-background">
+  <div class="slideshow-image img1"></div>
+  <div class="slideshow-image img2"></div>
+  <div class="slideshow-image img3"></div>
+</div>
   <div class="container">
     <h1>Work’s Best Friend</h1>
     <p><strong>Simple, effective help for businesses that need it — when they need it.</strong></p>
