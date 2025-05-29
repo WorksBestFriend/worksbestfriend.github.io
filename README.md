@@ -3,6 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work's Best Friend</title>
   <style>
+    header[role="banner"] {
+  display: none;
+}
       body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
