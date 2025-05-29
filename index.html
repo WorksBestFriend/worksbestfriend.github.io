@@ -13,6 +13,7 @@
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
+      position: relative;
     }
 
     .container {
@@ -21,7 +22,7 @@
       padding: 2.5rem;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      z-index: 1;
+      z-index: 2;
       position: relative;
     }
 
@@ -73,14 +74,14 @@
       color: #aaa;
     }
 
-    /* Slideshow styles */
+    /* Slideshow background */
     .slideshow-background {
       position: fixed;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      z-index: -1;
+      z-index: -2;
       overflow: hidden;
     }
 
@@ -89,24 +90,34 @@
       height: 100%;
       width: 100%;
       background-size: cover;
-      background-position: center;
+      background-position: center top;
       opacity: 0;
-      animation: fadeImages 30s infinite;
+      animation: fadeImages 60s ease-in-out infinite;
     }
 
     .img1 {
       background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
       animation-delay: 0s;
     }
-
     .img2 {
       background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg');
       animation-delay: 10s;
     }
-
     .img3 {
       background-image: url('https://worksbestfriend.github.io/MiamiSkyline.jpg');
       animation-delay: 20s;
+    }
+    .img4 {
+      background-image: url('https://worksbestfriend.github.io/BostonSkyline.jpg');
+      animation-delay: 30s;
+    }
+    .img5 {
+      background-image: url('https://worksbestfriend.github.io/BaltimoreSkyline.jpg');
+      animation-delay: 40s;
+    }
+    .img6 {
+      background-image: url('https://worksbestfriend.github.io/ChicagoSkyline.jpg');
+      animation-delay: 50s;
     }
 
     @keyframes fadeImages {
@@ -116,6 +127,37 @@
       40%  { opacity: 0; }
       100% { opacity: 0; }
     }
+
+    /* Overlay */
+    .slideshow-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    /* City label */
+    .city-label {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-shadow: 0 0 5px rgba(0,0,0,0.6);
+      z-index: 1;
+      animation: fadeImages 60s ease-in-out infinite;
+    }
+
+    .city1 { animation-delay: 0s; content: "New York City"; }
+    .city2 { animation-delay: 10s; content: "London"; }
+    .city3 { animation-delay: 20s; content: "Miami"; }
+    .city4 { animation-delay: 30s; content: "Boston"; }
+    .city5 { animation-delay: 40s; content: "Baltimore"; }
+    .city6 { animation-delay: 50s; content: "Chicago"; }
   </style>
 </head>
 
@@ -124,7 +166,20 @@
     <div class="slideshow-image img1"></div>
     <div class="slideshow-image img2"></div>
     <div class="slideshow-image img3"></div>
+    <div class="slideshow-image img4"></div>
+    <div class="slideshow-image img5"></div>
+    <div class="slideshow-image img6"></div>
   </div>
+
+  <div class="slideshow-overlay"></div>
+
+  <!-- City label (only 1 visible at a time) -->
+  <div class="city-label city1">New York City</div>
+  <div class="city-label city2">London</div>
+  <div class="city-label city3">Miami</div>
+  <div class="city-label city4">Boston</div>
+  <div class="city-label city5">Baltimore</div>
+  <div class="city-label city6">Chicago</div>
 
   <div class="container">
     <h1>Work’s Best Friend</h1>
