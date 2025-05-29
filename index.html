@@ -3,17 +3,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work's Best Friend</title>
   <style>
-      body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 2rem;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
 
     .container {
       max-width: 600px;
@@ -21,16 +21,21 @@
       padding: 2.5rem;
       border-radius: 16px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      z-index: 1;
+      position: relative;
     }
+
     h1 {
       margin-bottom: 0.5rem;
       font-size: 2rem;
     }
+
     p {
       margin: 1rem 0;
       line-height: 1.6;
       color: #555;
     }
+
     input[type="email"] {
       padding: 0.75rem 1rem;
       width: 80%;
@@ -39,6 +44,7 @@
       font-size: 1rem;
       margin-top: 1rem;
     }
+
     button {
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
@@ -50,67 +56,76 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     button:hover {
       background-color: #265ed6;
     }
+
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .footer {
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #aaa;
     }
+
+    /* Slideshow styles */
+    .slideshow-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .slideshow-image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: fadeImages 30s infinite;
+    }
+
+    .img1 {
+      background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
+      animation-delay: 0s;
+    }
+
+    .img2 {
+      background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg');
+      animation-delay: 10s;
+    }
+
+    .img3 {
+      background-image: url('https://worksbestfriend.github.io/MiamiSkyline.jpg');
+      animation-delay: 20s;
+    }
+
+    @keyframes fadeImages {
+      0%   { opacity: 0; }
+      10%  { opacity: 1; }
+      30%  { opacity: 1; }
+      40%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
   </style>
-.slideshow-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.slideshow-image {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  animation: fadeImages 30s infinite;
-}
-
-.img1 {
-  background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
-  animation-delay: 0s;
-}
-.img2 {
-  background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg');
-  animation-delay: 10s;
-}
-.img3 {
-  background-image: url('worksbestfriend.github.io/MiamiSkyline.jpg');
-  animation-delay: 20s;
-}
-
-@keyframes fadeImages {
-  0%   { opacity: 0; }
-  10%  { opacity: 1; }
-  30%  { opacity: 1; }
-  40%  { opacity: 0; }
-  100% { opacity: 0; }
-}
 </head>
+
 <body>
-<div class="slideshow-background">
-  <div class="slideshow-image img1"></div>
-  <div class="slideshow-image img2"></div>
-  <div class="slideshow-image img3"></div>
-</div>
+  <div class="slideshow-background">
+    <div class="slideshow-image img1"></div>
+    <div class="slideshow-image img2"></div>
+    <div class="slideshow-image img3"></div>
+  </div>
+
   <div class="container">
     <h1>Work’s Best Friend</h1>
     <p><strong>Simple, effective help for businesses that need it — when they need it.</strong></p>
@@ -118,15 +133,13 @@
        With tailored services to your real needs.<br>
        Think of us as your on-call business partner.</p>
     <form action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
-  <label for="email">💬 Interested in working with us?</label>
-  <input type="email" id="email" name="email" placeholder="Enter your email" required />
-  <button type="submit">Send</button>
-
-  <!-- Optional hidden fields -->
-  <input type="hidden" name="_subject" value="New Lead from Work's Best Friend!" />
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-</form>
+      <label for="email">💬 Interested in working with us?</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Send</button>
+      <input type="hidden" name="_subject" value="New Lead from Work's Best Friend!" />
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    </form>
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
 </body>
