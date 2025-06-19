@@ -136,36 +136,29 @@
       100% { opacity: 0; }
     }
 
-    /* Mission Section */
-    .mission-section {
+    /* Acronym Section Styles */
+    .acronym-section {
       margin-top: 2rem;
       text-align: left;
+      background-color: #f4faff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-left: 5px solid #3778f0;
     }
 
-    .mission-toggle {
-      background-color: #f0f0f0;
-      border: none;
-      padding: 0.75rem 1rem;
+    .acronym-section h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .acronym-list {
+      padding-left: 1rem;
+      list-style-type: none;
+    }
+
+    .acronym-list li {
+      margin-bottom: 0.5rem;
       font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      width: 100%;
-      text-align: left;
-    }
-
-    .mission-toggle:hover {
-      background-color: #e0e0e0;
-    }
-
-    .mission-text {
-      display: none;
-      margin-top: 1rem;
-      padding: 1rem;
-      background-color: #f9f9f9;
-      border-left: 4px solid #3778f0;
-      border-radius: 8px;
-      color: #444;
     }
   </style>
 </head>
@@ -198,23 +191,18 @@
       <input type="hidden" name="_template" value="table">
     </form>
 
-    <!-- Our Mission Section -->
-    <div class="mission-section">
-      <button class="mission-toggle" onclick="toggleMission()">📌 Our Mission</button>
-      <div id="missionText" class="mission-text">
-        <p>
-          Our mission is to give small business owners their time and confidence back by being the reliable, nimble partner they can count on — for marketing and more. No red tape, just real help.
-        </p>
-      </div>
+    <!-- Acronym Explanation Section -->
+    <div class="acronym-section">
+      <h2>Why Work’s Best Friend?</h2>
+      <p><strong>Because W.O.R.K.’S B.E.S.T. F.R.I.E.N.D. is more than a name — it’s our promise:</strong></p>
+      <ul class="acronym-list">
+        <li><strong>W</strong>e <strong>O</strong>pen <strong>R</strong>outes to <strong>K</strong>iller <strong>S</strong>avings</li>
+        <li><strong>B</strong>etter <strong>E</strong>xposure through <strong>S</strong>mart <strong>T</strong>argeting</li>
+        <li><strong>F</strong>inding <strong>R</strong>eal <strong>I</strong>nsightful <strong>E</strong>xposure <strong>N</strong>ear your <strong>D</strong>ollar</li>
+      </ul>
+      <p>We’re your behind-the-scenes team, getting you the best billboard and signage options that actually fit your business and budget.</p>
     </div>
 
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
-
-  <script>
-    function toggleMission() {
-      const mission = document.getElementById('missionText');
-      mission.style.display = (mission.style.display === 'block') ? 'none' : 'block';
-    }
-  </script>
 </body>
