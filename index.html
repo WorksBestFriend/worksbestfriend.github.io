@@ -36,7 +36,7 @@
 
     .container {
       margin-top: 3.5rem;
-      max-width: 600px;
+      max-width: 1000px;
       background: white;
       padding: 2.5rem;
       border-radius: 16px;
@@ -136,29 +136,72 @@
       100% { opacity: 0; }
     }
 
-    /* Acronym Section Styles */
-    .acronym-section {
+    /* Acronym Hero Section */
+    .acronym-hero {
+      background: #f4faff;
+      border-left: 8px solid #3778f0;
       margin-top: 2rem;
-      text-align: left;
-      background-color: #f4faff;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 12px;
-      border-left: 5px solid #3778f0;
     }
 
-    .acronym-section h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
 
-    .acronym-list {
-      padding-left: 1rem;
-      list-style-type: none;
+    .hero-text {
+      flex: 1;
+      text-align: left;
     }
 
-    .acronym-list li {
+    .hero-text h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .hero-text li {
       margin-bottom: 0.5rem;
       font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .hero-btn {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #3778f0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .hero-btn:hover {
+      background-color: #265ed6;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      flex: 1;
+    }
+
+    @media (max-width: 800px) {
+      .hero-content {
+        flex-direction: column;
+      }
+      .hero-image {
+        margin-top: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -191,17 +234,24 @@
       <input type="hidden" name="_template" value="table">
     </form>
 
-    <!-- Acronym Explanation Section -->
-    <div class="acronym-section">
-      <h2>Why Work’s Best Friend?</h2>
-      <p><strong>Because W.O.R.K.’S B.E.S.T. F.R.I.E.N.D. is more than a name — it’s our promise:</strong></p>
-      <ul class="acronym-list">
-        <li><strong>W</strong>e <strong>O</strong>pen <strong>R</strong>outes to <strong>K</strong>iller <strong>S</strong>avings</li>
-        <li><strong>B</strong>etter <strong>E</strong>xposure through <strong>S</strong>mart <strong>T</strong>argeting</li>
-        <li><strong>F</strong>inding <strong>R</strong>eal <strong>I</strong>nsightful <strong>E</strong>xposure <strong>N</strong>ear your <strong>D</strong>ollar</li>
-      </ul>
-      <p>We’re your behind-the-scenes team, getting you the best billboard and signage options that actually fit your business and budget.</p>
-    </div>
+    <section class="acronym-hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Why Work’s Best Friend?</h2>
+          <p><strong>W.O.R.K.’S B.E.S.T. F.R.I.E.N.D.: Our promise to you.</strong></p>
+          <ul>
+            <li><strong>W</strong>e <strong>O</strong>pen <strong>R</strong>outes to <strong>K</strong>iller <strong>S</strong>avings</li>
+            <li><strong>B</strong>etter <strong>E</strong>xposure through <strong>S</strong>mart <strong>T</strong>argeting</li>
+            <li><strong>F</strong>inding <strong>R</strong>eal <strong>I</strong>nsightful <strong>E</strong>xposure <strong>N</strong>ear your <strong>D</strong>ollar</li>
+          </ul>
+          <p>We connect your business with billboard and signage inventory—all within your budget—so you get premier exposure and rates that used to only be for big brands.</p>
+          <button class="hero-btn">Get Started</button>
+        </div>
+        <div class="hero-image">
+          <img src="https://worksbestfriend.github.io/hero-signage.jpg" alt="Billboard signage example" />
+        </div>
+      </div>
+    </section>
 
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
