@@ -7,12 +7,8 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #1a1a1a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       text-align: center;
-      padding: 2rem;
+      padding: 0;
     }
 
     .hiring-banner {
@@ -34,15 +30,44 @@
       text-decoration: underline;
     }
 
-    .container {
-      margin-top: 3.5rem;
-      max-width: 1000px;
-      background: white;
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      z-index: 1;
+    .hero-slideshow {
       position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-slide {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: fadeImages 30s infinite;
+    }
+
+    .img1 { background-image: url('https://worksbestfriend.github.io/NYCSkyline.png'); animation-delay: 0s; }
+    .img2 { background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg'); animation-delay: 10s; }
+    .img3 { background-image: url('https://worksbestfriend.github.io/MiamiSkyline.jpg'); animation-delay: 20s; }
+
+    @keyframes fadeImages {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: -100vh auto 0;
+      padding: 4rem 2rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 10;
     }
 
     h1 {
@@ -93,50 +118,6 @@
       color: #aaa;
     }
 
-    .slideshow-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .slideshow-image {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      animation: fadeImages 30s infinite;
-    }
-
-    .img1 {
-      background-image: url('https://worksbestfriend.github.io/NYCSkyline.png');
-      animation-delay: 0s;
-    }
-
-    .img2 {
-      background-image: url('https://worksbestfriend.github.io/LondonSkyline.jpeg');
-      animation-delay: 10s;
-    }
-
-    .img3 {
-      background-image: url('https://worksbestfriend.github.io/MiamiSkyline.jpg');
-      animation-delay: 20s;
-    }
-
-    @keyframes fadeImages {
-      0%   { opacity: 0; }
-      10%  { opacity: 1; }
-      30%  { opacity: 1; }
-      40%  { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
-    /* Acronym Hero Section */
     .acronym-hero {
       background: #f4faff;
       border-left: 8px solid #3778f0;
@@ -205,16 +186,15 @@
     }
   </style>
 </head>
-
 <body>
   <div class="hiring-banner">
     🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
   </div>
 
-  <div class="slideshow-background">
-    <div class="slideshow-image img1"></div>
-    <div class="slideshow-image img2"></div>
-    <div class="slideshow-image img3"></div>
+  <div class="hero-slideshow">
+    <div class="hero-slide img1"></div>
+    <div class="hero-slide img2"></div>
+    <div class="hero-slide img3"></div>
   </div>
 
   <div class="container">
