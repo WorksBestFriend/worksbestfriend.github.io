@@ -135,14 +135,45 @@
       40%  { opacity: 0; }
       100% { opacity: 0; }
     }
+
+    /* Mission Section */
+    .mission-section {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .mission-toggle {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      text-align: left;
+    }
+
+    .mission-toggle:hover {
+      background-color: #e0e0e0;
+    }
+
+    .mission-text {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-left: 4px solid #3778f0;
+      border-radius: 8px;
+      color: #444;
+    }
   </style>
 </head>
 
 <body>
   <div class="hiring-banner">
-  🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
-</div>
-
+    🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
+  </div>
 
   <div class="slideshow-background">
     <div class="slideshow-image img1"></div>
@@ -157,6 +188,7 @@
     <p>We’re a flexible agency helping business owners with marketing and more.<br>
        With tailored services to your real needs.<br>
        Think of us as your on-call business partner.</p>
+
     <form action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
       <label for="email">💬 Interested in working with us?</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required />
@@ -165,6 +197,24 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
     </form>
+
+    <!-- Our Mission Section -->
+    <div class="mission-section">
+      <button class="mission-toggle" onclick="toggleMission()">📌 Our Mission</button>
+      <div id="missionText" class="mission-text">
+        <p>
+          Our mission is to give small business owners their time and confidence back by being the reliable, nimble partner they can count on — for marketing and more. No red tape, just real help.
+        </p>
+      </div>
+    </div>
+
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
+
+  <script>
+    function toggleMission() {
+      const mission = document.getElementById('missionText');
+      mission.style.display = (mission.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
