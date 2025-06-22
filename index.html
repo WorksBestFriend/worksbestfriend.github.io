@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,8 +10,7 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #1a1a1a;
-      text-align: center;
-      padding: 0;
+      padding-bottom: 60px; /* room for fixed bottom banner */
     }
 
     nav {
@@ -86,27 +87,12 @@
       }
     }
 
-    .hiring-banner {
-      background-color: #fff4cc;
-      color: #5c4400;
-      text-align: center;
-      padding: 0.75rem 1rem;
-      font-weight: bold;
-      font-size: 1rem;
-      border-bottom: 1px solid #ffd966;
-      margin-top: 60px;
-    }
-
-    .hiring-banner a {
-      color: #b36b00;
-      text-decoration: underline;
-    }
-
     .hero-slideshow {
       position: relative;
       height: 100vh;
       width: 100%;
       overflow: hidden;
+      margin-top: 60px;
     }
 
     .hero-slide {
@@ -263,6 +249,25 @@
         margin-top: 1.5rem;
       }
     }
+
+    .hiring-banner {
+      background-color: #fff4cc;
+      color: #5c4400;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+      border-top: 1px solid #ffd966;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .hiring-banner a {
+      color: #b36b00;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -282,10 +287,6 @@
     </div>
   </nav>
 
-  <div class="hiring-banner">
-    🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
-  </div>
-
   <div class="hero-slideshow">
     <div class="hero-slide img1"></div>
     <div class="hero-slide img2"></div>
@@ -297,9 +298,8 @@
     <h1>Work’s Best Friend</h1>
     <div class="sub-tagline">Better Rates. Better Reach. Better Results.</div>
     <p><strong>Big Visibility. Any Budget.</strong></p>
-    <p>From small signs to massive campaigns — we’ll find the right fit, without wasting a cent.
-<br>
-       Think of us as your flexible partner in real-world advertising.</p>
+    <p>From small signs to massive campaigns — we’ll find the right fit, without wasting a cent.<br>
+       Think of us as your on-call business partner.</p>
 
     <form id="contact" action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
       <label for="email">💬 Interested in working with us?</label>
@@ -332,11 +332,14 @@
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
 
+  <div class="hiring-banner">
+    🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
+  </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Mobile menu toggle
     const toggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     toggle.addEventListener('click', () => {
@@ -344,3 +347,4 @@
     });
   </script>
 </body>
+</html>
