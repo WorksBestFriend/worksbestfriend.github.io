@@ -86,5 +86,14 @@
   </main>
 
   <footer>© 2025 Work’s Best Friend</footer>
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (toggle && navMenu) {
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+</script>
 </body>
 </html>
