@@ -12,37 +12,42 @@
       padding: 0;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 999;
-    }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  z-index: 999;
+}
 
-    nav img {
-      height: 40px;
-    }
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+.nav-container img {
+  height: 40px;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #1a1a1a;
-      font-weight: 500;
-    }
+.nav-container ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+}
 
     .hiring-banner {
       background-color: #fff4cc;
@@ -229,14 +234,16 @@
   </style>
 </head>
 <body>
-  <nav>
-    <img src="https://worksbestfriend.github.io/logo.png" alt="WBF Logo">
+<nav>
+  <div class="nav-container">
+    <img src="https://worksbestfriend.github.io/logo.png" alt="WBF Logo" />
     <ul>
       <li><a href="#services">Services</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
   <div class="hiring-banner">
     🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
