@@ -14,19 +14,90 @@
       background: #ffffff;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      border-bottom: 1px solid #eee;
-      z-index: 999;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  z-index: 999;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  /* Change justify-content to space-between to keep logo left */
+  justify-content: space-between;
+}
+
+.nav-logo {
+  /* Keep logo on the left */
+}
+
+.nav-links-wrapper {
+  display: flex;
+  align-items: center;
+  /* This container will hold menu-toggle and nav menu */
+  /* We'll center the ul horizontally by adding flex-grow and justify-content */
+  flex-grow: 1;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* The ul inside nav-links-wrapper will be flex row */
+.nav-links-wrapper ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide menu toggle by default */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #1a1a1a;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 800px) {
+  .nav-links-wrapper {
+    flex-grow: 0; /* don't stretch */
+  }
+
+  nav {
+    padding: 1rem 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  ul#nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: none;
+  }
+
+  ul#nav-menu.active {
+    display: flex;
+  }
+}
 
     nav img {
       height: 40px;
@@ -226,8 +297,12 @@
 </head>
 <body>
 
-  <nav>
+<nav>
+  <div class="nav-logo">
     <a href="/"><img src="https://worksbestfriend.github.io/logo.png" alt="Logo" /></a>
+  </div>
+
+  <div class="nav-links-wrapper">
     <div class="menu-toggle" id="menu-toggle">
       <span></span>
       <span></span>
@@ -238,7 +313,8 @@
       <li><a href="/why-us/">Why Us</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
 
   <div class="hero-slideshow">
     <div class="hero-slide img1"></div>
