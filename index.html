@@ -46,6 +46,7 @@
       font-weight: 500;
     }
 
+    /* Hamburger menu toggle - hidden by default */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -60,6 +61,7 @@
       border-radius: 2px;
     }
 
+    /* Mobile styles */
     @media (max-width: 800px) {
       nav ul {
         position: absolute;
@@ -273,8 +275,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
     const toggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+
     if (toggle && navMenu) {
       toggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
