@@ -2,6 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Work's Best Friend</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -9,6 +10,38 @@
       color: #1a1a1a;
       text-align: center;
       padding: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 999;
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
     }
 
     .hiring-banner {
@@ -19,10 +52,7 @@
       font-weight: bold;
       font-size: 1rem;
       border-bottom: 1px solid #ffd966;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
+      margin-top: 60px;
     }
 
     .hiring-banner a {
@@ -62,7 +92,7 @@
     .container {
       max-width: 1000px;
       margin: -100vh auto 0;
-      padding: 4rem 2rem;
+      padding: 5rem 2rem 2rem;
       background: white;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -73,6 +103,13 @@
     h1 {
       margin-bottom: 0.5rem;
       font-size: 2rem;
+    }
+
+    .sub-tagline {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #3778f0;
     }
 
     p {
@@ -180,6 +217,11 @@
       .hero-content {
         flex-direction: column;
       }
+      nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding-top: 0.5rem;
+      }
       .hero-image {
         margin-top: 1.5rem;
       }
@@ -187,6 +229,15 @@
   </style>
 </head>
 <body>
+  <nav>
+    <img src="https://worksbestfriend.github.io/logo.png" alt="WBF Logo">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="hiring-banner">
     🎉 Interested in working for us? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-QfhqypQrbYb5IC3HcE3KOfDnyLDLsARJXQRD8CuEaMWw6A/viewform?usp=header" target="_blank" rel="noopener noreferrer">We're hiring!</a>
   </div>
@@ -197,15 +248,16 @@
     <div class="hero-slide img3"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="services">
     <img src="https://worksbestfriend.github.io/logo.png" alt="Work’s Best Friend Logo" style="max-width: 100px; margin-bottom: 1rem;" />
     <h1>Work’s Best Friend</h1>
+    <div class="sub-tagline">Better Rates. Better Reach. Better Results.</div>
     <p><strong>Simple, effective help for businesses that need it — when they need it.</strong></p>
     <p>We’re a flexible agency helping business owners with marketing and more.<br>
        With tailored services to your real needs.<br>
        Think of us as your on-call business partner.</p>
 
-    <form action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
+    <form id="contact" action="https://formsubmit.co/jay@worksbestfriend.com" method="POST">
       <label for="email">💬 Interested in working with us?</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required />
       <button type="submit">Send</button>
@@ -214,9 +266,9 @@
       <input type="hidden" name="_template" value="table">
     </form>
 
-    <section class="acronym-hero">
+    <section class="acronym-hero" id="why">
       <div class="hero-content">
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-up">
           <h2>Why Work’s Best Friend?</h2>
           <p><strong>W.O.R.K.’S B.E.S.T. F.R.I.E.N.D.: Our promise to you.</strong></p>
           <ul>
@@ -227,7 +279,7 @@
           <p>We connect your business with billboard and signage inventory—all within your budget—so you get premier exposure and rates that used to only be for big brands.</p>
           <button class="hero-btn">Get Started</button>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-aos="fade-left">
           <img src="https://worksbestfriend.github.io/hero-signage.jpg" alt="Billboard signage example" />
         </div>
       </div>
@@ -235,4 +287,9 @@
 
     <div class="footer">© 2025 Work’s Best Friend</div>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
