@@ -112,6 +112,7 @@
     .hero {
   position: relative;
   height: 100vh;
+  background-image: url('https://worksbestfriend.github.io/NYCSkyline.png'); /* add this line */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -369,19 +370,21 @@
     }
   </script>
   <a href="/contact/" class="sticky-call-button">Book a Call</a>
-  <script>
-  const hero = document.querySelector('.hero');
-  const heroImages = [
-    'https://worksbestfriend.github.io/NYCSkyline.png',
-    'https://worksbestfriend.github.io/MiamiSkyline.png',
-    'https://worksbestfriend.github.io/ChicagoSkyline.png'
-  ];
-  let currentImage = 0;
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hero = document.querySelector('.hero');
+    const heroImages = [
+      'https://worksbestfriend.github.io/NYCSkyline.png',
+      'https://worksbestfriend.github.io/MiamiSkyline.png',
+      'https://worksbestfriend.github.io/ChicagoSkyline.png'
+    ];
+    let currentImage = 0;
 
-  setInterval(() => {
-    currentImage = (currentImage + 1) % heroImages.length;
-    hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
-  }, 5000); // change every 5 seconds
+    setInterval(() => {
+      currentImage = (currentImage + 1) % heroImages.length;
+      hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
+    }, 5000);
+  });
 </script>
 </body>
 </html>
