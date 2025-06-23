@@ -88,16 +88,38 @@
       }
     }
 
+    .hero-banner {
+      background: #3778f0;
+      color: white;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-banner p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
     main {
-      padding: 6rem 2rem 2rem;
+      padding: 2rem 2rem 4rem;
       max-width: 800px;
       margin: auto;
     }
 
-    h1 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      text-align: center;
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      color: #3778f0;
     }
 
     p {
@@ -106,9 +128,7 @@
       color: #333;
       margin-bottom: 1.25rem;
     }
-main > p, h1 {
-  text-align: center;
-}
+
     .contact-methods {
       margin-top: 2rem;
       display: flex;
@@ -121,26 +141,29 @@ main > p, h1 {
       border-left: 6px solid #3778f0;
       padding: 1.5rem;
       border-radius: 12px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      box-shadow: 0 6px 14px rgba(55, 120, 240, 0.15);
     }
 
     .contact-card p {
       margin: 0 0 0.75rem 0;
       font-size: 1rem;
     }
-.contact-card a {
-  display: block;
-  text-align: center;
-  margin-top: 0.5rem;
-  font-weight: bold;
-  font-size: 1.05rem;
-}
 
-    a {
+    .contact-card a {
+      display: block;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      font-size: 1.05rem;
       color: #3778f0;
       text-decoration: none;
     }
 
-    a:hover {
+    .contact-card a:hover {
       text-decoration: underline;
     }
 
@@ -154,10 +177,9 @@ main > p, h1 {
   </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo"><img src="https://worksbestfriend.github.io/logo.png" alt="Logo" /></a>
+      <a href="/"><img src="https://worksbestfriend.github.io/logo.png" alt="Logo" /></a>
       <div class="menu-toggle" id="menu-toggle">
         <span></span><span></span><span></span>
       </div>
@@ -169,58 +191,53 @@ main > p, h1 {
     </div>
   </nav>
 
-  <main>
+  <section class="hero-banner" data-aos="fade-down">
     <h1>Let’s Talk Billboards</h1>
     <p>Whether you’re ready to launch a campaign or just want to learn more, we’re here to help. Reach out and we’ll get back to you fast.</p>
+  </section>
 
+  <main data-aos="fade-up">
     <div class="contact-methods">
-
       <div class="contact-card">
-        <h2>📞 Call</h2>
+        <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/phone.png" alt="Phone" /> Call</h2>
         <p>Got questions or want to chat directly? Give us a call anytime — we’re here 24/7 to help you get started.</p>
         <p><a href="tel:3057715230">(305) 771-5230</a></p>
       </div>
 
       <div class="contact-card">
-        <h2>📬 General Inquiries</h2>
+        <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/new-post.png" alt="Email" /> General Inquiries</h2>
         <p>Have general questions or want to learn more about how we work? Send us a message and we’ll respond quickly.</p>
         <p><a href="mailto:info@worksbestfriend.com">info@worksbestfriend.com</a></p>
       </div>
 
       <div class="contact-card">
-        <h2>📈 Sales & Campaigns</h2>
+        <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/sales-performance.png" alt="Sales" /> Sales & Campaigns</h2>
         <p>Ready to launch or improve a billboard campaign? Our sales team is excited to craft a plan that fits your goals and budget.</p>
         <p><a href="mailto:sales@worksbestfriend.com">sales@worksbestfriend.com</a></p>
       </div>
 
       <div class="contact-card">
-        <h2>🧠 Management & Partnerships</h2>
+        <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/conference.png" alt="Partnerships" /> Management & Partnerships</h2>
         <p>Looking to build a long-term partnership or discuss management opportunities? Reach out and let’s explore how we can collaborate.</p>
         <p><a href="mailto:management@worksbestfriend.com">management@worksbestfriend.com</a></p>
       </div>
 
       <div class="contact-card">
-        <h2>🚀 We're Hiring!</h2>
-        <p>Interested in joining our growing team?</p>
-      </p> We're always looking for passionate people who love helping businesses grow.</p>
-        <p>Please send your resume and a brief message to:  
-          <a href="mailto:hiring@worksbestfriend.com">hiring@worksbestfriend.com</a>.
-        </p>
+        <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/rocket.png" alt="Hiring" /> We're Hiring!</h2>
+        <p>Interested in joining our growing team? We're always looking for passionate people who love helping businesses grow.</p>
+        <p>Please send your resume and a brief message to:  <a href="mailto:hiring@worksbestfriend.com">hiring@worksbestfriend.com</a>.</p>
       </div>
-
     </div>
   </main>
 
   <footer>© 2025 Work’s Best Friend</footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    if (toggle && navMenu) {
-      toggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-    }
+    AOS.init();
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
   </script>
 </body>
 </html>
