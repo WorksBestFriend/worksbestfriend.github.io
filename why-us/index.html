@@ -88,65 +88,37 @@
       }
     }
 
-    /* Hero banner for consistency */
-    .hero-banner {
-      background: #3778f0;
-      color: white;
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-      margin-top: 60px; /* offset nav */
-    }
-
-    .hero-banner h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-banner p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      opacity: 0.9;
-    }
-
     main {
-      padding: 2rem 2rem 4rem;
+      padding: 6rem 2rem 2rem;
       max-width: 900px;
       margin: auto;
     }
 
     h1 {
-      font-size: 2.25rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       text-align: center;
     }
 
     h2 {
       font-size: 1.75rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
+      margin-top: 2.5rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 10px;
       color: #3778f0;
     }
 
-    /* Small icon next to h2 */
-    h2::before {
-      content: '';
-      display: inline-block;
+    h2 img {
       width: 24px;
       height: 24px;
-      background-image: url('https://img.icons8.com/ios-filled/24/3778f0/checkmark.png');
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     p {
       line-height: 1.7;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #333;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     ul {
@@ -164,15 +136,6 @@
       border-radius: 12px;
       margin-top: 3rem;
       text-align: center;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 8px rgb(55 120 240 / 0.15);
-      transition: box-shadow 0.3s ease;
-    }
-
-    .cta:hover {
-      box-shadow: 0 6px 14px rgb(55 120 240 / 0.35);
     }
 
     .cta p {
@@ -185,10 +148,9 @@
       background-color: #3778f0;
       color: white;
       text-decoration: none;
-      padding: 0.75rem 1.75rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1rem;
       transition: background-color 0.3s ease;
     }
 
@@ -201,7 +163,7 @@
       font-size: 0.9rem;
       color: #aaa;
       padding: 2rem 0;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -221,25 +183,36 @@
     </div>
   </nav>
 
-  <section class="hero-banner" data-aos="fade-down">
-    <h1>Why Work’s Best Friend?</h1>
-    <p>Your trusted partner for high-impact billboard advertising with less hassle and more results.</p>
-  </section>
-
   <main>
-    <h2><img src="https://img.icons8.com/ios-filled/24/3778f0/marker.png" alt="" aria-hidden="true" /> Strategic Location Access</h2>
+    <h1>Why Work’s Best Friend?</h1>
+
+    <p>We’re not just another media agency — we’re your boots-on-the-ground partner for billboard success. At Work’s Best Friend, we help you unlock high-impact outdoor advertising with less hassle, less waste, and more real-world results.</p>
+
+    <h2>
+      <img src="https://img.icons8.com/ios-filled/24/3778f0/marker.png" alt="Location Icon" aria-hidden="true" />
+      Strategic Location Access
+    </h2>
     <p>We have direct access to premium billboard inventory in high-traffic areas across major U.S. and international cities — often before the bigger firms do. Whether you're looking to go local or national, we’ll find the placements that make your message impossible to miss.</p>
 
-    <h2>💰 Flexible Budget Options</h2>
+    <h2>
+      <img src="https://img.icons8.com/ios-filled/24/3778f0/money-bag.png" alt="Budget Icon" aria-hidden="true" />
+      Flexible Budget Options
+    </h2>
     <p>Big visibility doesn't need a big agency retainer. We’ll help you build a campaign that fits your goals *and* your budget — whether you're a solo founder or a scaling brand. No bloated fees, no waste, no nonsense.</p>
 
-    <h2>🚀 Fast Turnaround. No Red Tape.</h2>
+    <h2>
+      <img src="https://img.icons8.com/ios-filled/24/3778f0/fast-forward.png" alt="Fast Turnaround Icon" aria-hidden="true" />
+      Fast Turnaround. No Red Tape.
+    </h2>
     <p>Skip the delays. We move quickly, working directly with billboard owners and operators to get your campaign live — fast. We're small, nimble, and focused on outcomes, not billable hours.</p>
 
-    <h2>🧠 Real Strategy. Real Support.</h2>
+    <h2>
+      <img src="https://img.icons8.com/ios-filled/24/3778f0/brain.png" alt="Strategy Icon" aria-hidden="true" />
+      Real Strategy. Real Support.
+    </h2>
     <p>You’ll work with a team that cares about results, not just placements. We help you design, target, and execute your billboard campaign from start to finish, with creative input and strategy that align with your brand.</p>
 
-    <div class="cta" data-aos="fade-up">
+    <div class="cta">
       <p>Ready to get started? Let’s talk about where your next billboard should go.</p>
       <a href="/contact/">Contact Us</a>
     </div>
@@ -247,12 +220,14 @@
 
   <footer>© 2025 Work’s Best Friend</footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('nav-menu').classList.toggle('active');
-    });
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (toggle && navMenu) {
+      toggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
   </script>
 </body>
 </html>
