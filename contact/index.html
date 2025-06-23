@@ -161,6 +161,9 @@
       font-size: 1.05rem;
       color: #3778f0;
       text-decoration: none;
+        word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
     }
 
     .contact-card a:hover {
@@ -174,6 +177,15 @@
       padding: 2rem 0;
       margin-top: 3rem;
     }
+    @media (max-width: 480px) {
+  .contact-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .contact-card a {
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
