@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Work's Best Friend</title>
+  <title>Services | Work’s Best Friend</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #1a1a1a;
-      padding-bottom: 60px;
       background-color: #ffffff;
     }
 
@@ -88,33 +87,98 @@
       }
     }
 
+    .hero-banner {
+      background: #3778f0;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero-banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-banner p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     main {
-      padding: 6rem 2rem 2rem;
-      max-width: 800px;
+      padding: 4rem 2rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
 
-    h1 {
-      font-size: 2.25rem;
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      max-width: 280px;
+      text-align: center;
+    }
+
+    .service-card img {
+      width: 64px;
+      height: 64px;
       margin-bottom: 1rem;
-      text-align: center;
+      filter: drop-shadow(0 0 2px rgba(55,120,240,0.6));
     }
 
-    p {
+    .service-card h3 {
+      color: #3778f0;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
       font-size: 1.05rem;
-      line-height: 1.6;
       color: #333;
-      margin-bottom: 1.5rem;
+    }
+
+    h2 {
       text-align: center;
+      font-size: 2rem;
+      margin: 4rem 0 2rem;
+      color: #3778f0;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    .how-it-works-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
-    li {
-      margin-bottom: 0.75rem;
-      font-size: 1.05rem;
+    .how-it-works-step-number {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #3778f0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .how-it-works-step h3 {
+      margin: 0;
+    }
+
+    .how-it-works-step p {
+      margin-top: 0.25rem;
+      color: #444;
+    }
+
+    .how-it-works-container {
+      max-width: 700px;
+      margin: auto;
     }
 
     footer {
@@ -122,6 +186,29 @@
       font-size: 0.9rem;
       color: #aaa;
       padding: 2rem 0;
+      margin-top: 4rem;
+    }
+
+    .sticky-call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #3778f0;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .sticky-call-button:hover {
+      background-color: #2e65c8;
     }
   </style>
 </head>
@@ -141,59 +228,68 @@
     </div>
   </nav>
 
+  <section class="hero-banner" data-aos="fade-down">
+    <h1>What We Do</h1>
+    <p>From strategy to signage, we help you launch billboard campaigns that hit your goals — not just the road.</p>
+  </section>
+
   <main>
-    <h1>Our Services</h1>
-    <p>We specialize in helping businesses of all sizes gain exposure through billboard and outdoor advertising. Whether it's a small local sign or a national campaign, we tailor every project to your goals and budget.</p>
-
-    <ul>
-      <li>🎯 Local & National Billboard Placement</li>
-      <li>📊 Campaign Strategy & Reporting</li>
-      <li>🖼️ Design & Copywriting Support</li>
-      <li>💼 Business-Specific Consultation</li>
-    </ul>
-     <!--How It Works Section -->
-<section style="margin-top: 3rem; background: #f9f9f9; padding: 2.5rem 1.5rem; border-radius: 12px;">
-  <h2 style="text-align: center; font-size: 1.75rem; margin-bottom: 2rem;">How It Works</h2>
-  <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin: auto;">
-    
-    <div style="display: flex; align-items: flex-start; gap: 1rem;">
-      <div style="min-width: 32px; height: 32px; border-radius: 50%; background-color: #3778f0; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
-      <div style="flex: 1;">
-        <h3 style="margin: 0;">Discovery</h3>
-        <p style="margin-top: 0.25rem; text-align: left;">Tell us your goals, audience, and budget. We'll guide you on what works best for your market and message.</p>
+    <section data-aos="fade-up">
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/billboard.png" alt="Billboard" />
+          <h3>Billboard Placement</h3>
+          <p>Local and national outdoor inventory tailored to your goals.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/strategy-board.png" alt="Strategy" />
+          <h3>Campaign Strategy</h3>
+          <p>Data-backed targeting and planning to maximize ROI.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/64/3778f0/design.png" alt="Design" />
+          <h3>Creative Support</h3>
+          <p>Billboard designs that stop traffic and spark action.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div style="display: flex; align-items: flex-start; gap: 1rem;">
-      <div style="min-width: 32px; height: 32px; border-radius: 50%; background-color: #3778f0; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
-      <div style="flex: 1;">
-        <h3 style="margin: 0;">Proposal</h3>
-        <p style="margin-top: 0.25rem; text-align: left;">We present you with billboard location options, pricing, and timelines — all tailored and transparent.</p>
+    <h2 data-aos="fade-up">How It Works</h2>
+    <section class="how-it-works-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">1</div>
+        <div>
+          <h3>Discovery</h3>
+          <p>Tell us your goals, audience, and budget. We'll guide you on what works best for your market and message.</p>
+        </div>
       </div>
-    </div>
-
-    <div style="display: flex; align-items: flex-start; gap: 1rem;">
-      <div style="min-width: 32px; height: 32px; border-radius: 50%; background-color: #3778f0; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
-      <div style="flex: 1;">
-        <h3 style="margin: 0;">Go Live</h3>
-        <p style="margin-top: 0.25rem; text-align: left;">We handle everything from contracts to installation. You launch your campaign, we handle the logistics.</p>
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">2</div>
+        <div>
+          <h3>Proposal</h3>
+          <p>We present you with billboard location options, pricing, and timelines — all tailored and transparent.</p>
+        </div>
       </div>
-    </div>
-
-  </div>
-</section>
+      <div class="how-it-works-step">
+        <div class="how-it-works-step-number">3</div>
+        <div>
+          <h3>Go Live</h3>
+          <p>We handle everything from contracts to installation. You launch your campaign, we handle the logistics.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>© 2025 Work’s Best Friend</footer>
 
+  <a href="/contact/" class="sticky-call-button">Book a Call</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    if (toggle && navMenu) {
-      toggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-    }
+    AOS.init();
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
   </script>
 </body>
 </html>
