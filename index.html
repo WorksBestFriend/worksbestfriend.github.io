@@ -84,6 +84,28 @@
       #nav-menu.active {
         display: flex;
       }
+      /* Sticky Book a Call Button */
+.sticky-call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3778f0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sticky-call-button:hover {
+  background-color: #2e65c8;
+}
     }
 
     /* HERO with animated overlay pulse */
@@ -344,5 +366,6 @@
       });
     }
   </script>
+  <a href="/contact/" class="sticky-call-button">Book a Call</a>
 </body>
 </html>
