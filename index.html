@@ -110,18 +110,20 @@
 
     /* HERO with animated overlay pulse */
     .hero {
-      position: relative;
-      height: 100vh;
-      background: url('https://worksbestfriend.github.io/NYCSkyline.png') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 60px;
-      text-align: center;
-      color: white;
-      background-size: cover;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
     .hero::before {
       content: "";
       position: absolute;
@@ -367,5 +369,19 @@
     }
   </script>
   <a href="/contact/" class="sticky-call-button">Book a Call</a>
+  <script>
+  const hero = document.querySelector('.hero');
+  const heroImages = [
+    'https://worksbestfriend.github.io/NYCSkyline.png',
+    'https://worksbestfriend.github.io/MiamiSkyline.png',
+    'https://worksbestfriend.github.io/ChicagoSkyline.png'
+  ];
+  let currentImage = 0;
+
+  setInterval(() => {
+    currentImage = (currentImage + 1) % heroImages.length;
+    hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
+  }, 5000); // change every 5 seconds
+</script>
 </body>
 </html>
