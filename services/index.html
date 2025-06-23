@@ -93,20 +93,6 @@
       padding: 4rem 2rem;
       text-align: center;
     }
-<section style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;" data-aos="fade-up">
-  <h2 style="text-align:center; color:#3778f0; margin-bottom:1rem;">Markets We Serve</h2>
-  <p style="text-align:center; font-size:1rem; color:#555; max-width: 700px; margin: 0 auto 1.5rem;">
-    We work in key cities and regions across the country to maximize your billboard campaign's impact.
-  </p>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-    <span style="background:#e1ecfb; color:#3778f0; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Miami</span>
-    <span style="background:#e1ecfb; color:#3778f0; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Hoboken</span>
-    <span style="background:#e1ecfb; color:#3778f0; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Boston</span>
-    <span style="background:#e1ecfb; color:#3778f0; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">NYC</span>
-    <span style="background:#e1ecfb; color:#3778f0; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">Chicago</span>
-    <!-- Repeat for all cities -->
-  </div>
-</section>
 
     .hero-banner h1 {
       font-size: 2.5rem;
@@ -179,6 +165,7 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     .how-it-works-step h3 {
@@ -193,6 +180,42 @@
     .how-it-works-container {
       max-width: 700px;
       margin: auto;
+    }
+
+    /* Markets We Serve */
+    .markets-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .markets-section h2 {
+      color: #3778f0;
+      margin-bottom: 1rem;
+    }
+    .markets-section p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
+    .markets-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .markets-list li {
+      background: #e1ecfb;
+      color: #3778f0;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
     }
 
     footer {
@@ -248,6 +271,38 @@
   </section>
 
   <main>
+
+    <section class="markets-section" data-aos="fade-up">
+      <h2>Markets We Serve</h2>
+      <p>We work in key cities and regions across the country to maximize your billboard campaign's impact.</p>
+      <ul class="markets-list" aria-label="Markets We Serve List">
+        <li>Miami</li>
+        <li>Hoboken</li>
+        <li>Boston</li>
+        <li>NYC</li>
+        <li>Chicago</li>
+        <li>Baltimore</li>
+        <li>San Francisco</li>
+        <li>Los Angeles</li>
+        <li>Orlando</li>
+        <li>Raleigh</li>
+        <li>Austin</li>
+        <li>Houston</li>
+        <li>Dallas</li>
+        <li>Charlotte</li>
+        <li>Denver</li>
+        <li>Colorado</li>
+        <li>San Diego</li>
+        <li>Phoenix</li>
+        <li>Seattle</li>
+        <li>Atlanta</li>
+        <li>Fort Lauderdale</li>
+        <li>Salt Lake City</li>
+        <li>Tampa</li>
+        <li>Naples</li>
+      </ul>
+    </section>
+
     <section data-aos="fade-up">
       <div class="services-grid">
         <div class="service-card">
@@ -292,6 +347,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>© 2025 Work’s Best Friend</footer>
